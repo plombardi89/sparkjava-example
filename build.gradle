@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+ext {
+  gsonVersion  = '2.7'
+  sparkVersion = '2.5'
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile group: 'com.sparkjava', name: 'spark-core', version: sparkVersion
+  compile group: 'com.google.code.gson', name: 'gson', version: gsonVersion
+
+}
+
+task wrapper(type: Wrapper) {
+  version = '2.13'
+}
